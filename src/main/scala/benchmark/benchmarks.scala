@@ -63,7 +63,7 @@ object benchmarks {
       (0 until state.numberOfIterations).foreach { _i =>
         state.a = state.a * state.b + state.c
       }
-      state.a.nonInline.cache()
+      state.a.nonInline.cache().close()
     }
   }
 }
